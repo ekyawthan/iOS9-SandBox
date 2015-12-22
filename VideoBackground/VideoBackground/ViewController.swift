@@ -28,7 +28,7 @@ class ViewController: UIViewController {
             view.layer.addSublayer(playerLayer)
             videoPlayer?.play()
             
-            NSNotificationCenter.defaultCenter().addObserver(self, selector: "loodVideo", name: AVPlayerItemDidPlayToEndTimeNotification, object: nil)
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: "loopVideo", name: AVPlayerItemDidPlayToEndTimeNotification, object: nil)
         }
         // Do any additional setup after loading the view, typically from a nib.
     }
