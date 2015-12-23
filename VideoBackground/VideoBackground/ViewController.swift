@@ -12,10 +12,13 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var logInButton: UIButton!
     var videoPlayer : AVPlayer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        logInButton.layer.cornerRadius = 4
         
         if let videoResourceURL = NSBundle.mainBundle().URLForResource("login", withExtension: "mov") {
             videoPlayer = AVPlayer(URL: videoResourceURL)
